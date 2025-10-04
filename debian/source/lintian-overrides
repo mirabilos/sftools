@@ -6,3 +6,7 @@ musescore-sftools source: cute-field
 
 # no, thanks
 musescore-sftools source: no-dep5-copyright
+
+# extra lintian churn related to dpkg silently changing the default
+# breaking innocent packages so we’d rather keep spelling it explicitly
+musescore-sftools source: redundant-rules-requires-root-no-field
