@@ -16,3 +16,7 @@ export DEB_CXXFLAGS_MAINT_APPEND := -Wno-deprecated-declarations
 
 %:
 	dh $@ --buildsystem=cmake
+
+override_dh_auto_configure:
+	dh_auto_configure --buildsystem=cmake -- \
+	    -DCMAKE_POLICY_VERSION_MINIMUM=3.5

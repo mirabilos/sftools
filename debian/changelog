@@ -1,8 +1,9 @@
 musescore-sftools (20201011-2) unstable; urgency=high
 
   * Bump Policy while here
+  * Apply cmake-FTBFS-fixing suggestion (Closes: #1113305)
 
- -- Thorsten Glaser <tg@mirbsd.de>  Sat, 04 Oct 2025 18:13:04 +0200
+ -- Thorsten Glaser <tg@mirbsd.de>  Sat, 04 Oct 2025 18:14:05 +0200
 
 musescore-sftools (20201011-1) unstable; urgency=medium
 
