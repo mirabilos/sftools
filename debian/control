@@ -5,7 +5,7 @@ Maintainer: Thorsten Glaser <tg@mirbsd.de>
 Homepage: https://github.com/musescore/sftools
 Build-Depends: cmake, debhelper-compat (= 13),
  libsndfile1-dev, pkgconf, qtbase5-dev (>= 5.6)
-Standards-Version: 4.6.1
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 VCS-git: https://github.com/mirabilos/sftools
 VCS-Browser: https://github.com/mirabilos/sftools

@@ -1,3 +1,9 @@
+musescore-sftools (20201011-2) unstable; urgency=high
+
+  * Bump Policy while here
+
+ -- Thorsten Glaser <tg@mirbsd.de>  Sat, 04 Oct 2025 18:13:04 +0200
+
 musescore-sftools (20201011-1) unstable; urgency=medium
 
   * New upstream release
