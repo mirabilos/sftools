@@ -1,6 +1,2 @@
 # false positive: name of a CLI parameter
 sf3convert: typo-in-manual-page pres press [usr/share/man/man1/sf3convert.1*
-
-# bug in lintian: #1019235
-sf3convert: spelling-error-in-changelog licence license *
-sf3convert: spelling-error-in-copyright Licence License
