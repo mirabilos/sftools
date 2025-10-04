@@ -11,8 +11,22 @@ export LC_ALL
 TZ:=UTC
 export TZ
 
-export DEB_BUILD_MAINT_OPTIONS := hardening=+all
-export DEB_CXXFLAGS_MAINT_APPEND := -Wno-deprecated-declarations
+shellescape='$(subst ','\'',$(1))'
+shellexport=$(1)=$(call shellescape,${$(1)})
+
+include /usr/share/dpkg/architecture.mk
+include /usr/share/dpkg/buildtools.mk
+
+OUR_CXXFLAGS:=	-Wno-deprecated-declarations
+
+ifneq (,$(filter debug,${DEB_BUILD_OPTIONS}))
+OUR_CXXFLAGS+=	-Og -g3
+endif
+
+dpkgbuildflagsmkescape=$(subst \,\\\,$(1))
+export DEB_BUILD_MAINT_OPTIONS := hardening=+all optimize=-lto
+export DEB_CXXFLAGS_MAINT_APPEND:=$(call dpkgbuildflagsmkescape,${OUR_CXXFLAGS})
+include /usr/share/dpkg/default.mk
 
 %:
 	dh $@ --buildsystem=cmake
